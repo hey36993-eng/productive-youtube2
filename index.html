@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Productive YouTube</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="#">▶ Productive YouTube</a>
+    <nav>
+      <a href="#discover">Discover</a>
+      <a href="#saved">Saved</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="tag">LESS SCROLLING. MORE LEARNING.</p>
+      <h1>Make your YouTube time <span>count.</span></h1>
+      <p>Discover useful videos that help you learn skills, improve yourself and grow.</p>
+      <a class="button" href="#discover">Explore videos ↓</a>
+    </section>
+
+    <section id="discover">
+      <h2>Discover useful videos</h2>
+      <input id="search" type="search" placeholder="Search videos or topics...">
+
+      <div class="filters">
+        <button class="active" data-category="All">All</button>
+        <button data-category="Technology">Technology</button>
+        <button data-category="Science">Science</button>
+        <button data-category="Finance">Finance</button>
+        <button data-category="Education">Education</button>
+        <button data-category="Personal Growth">Personal Growth</button>
+      </div>
+
+      <div id="videos" class="video-grid"></div>
+      <p id="empty" hidden>No videos found. Try another search.</p>
+    </section>
+
+    <section id="saved">
+      <h2>Your saved videos</h2>
+      <div id="saved-videos">No saved videos yet.</div>
+    </section>
+  </main>
+
+  <footer>
+    Productive YouTube · Learn something useful every day.
+    <p>Phase 1 prototype. Sample video data only.</p>
+  </footer>
+</body>
+</html>
