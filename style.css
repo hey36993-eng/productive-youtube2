@@ -1,0 +1,194 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #0c1220;
+  color: #f5f7fb;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 7%;
+  border-bottom: 1px solid #26344a;
+}
+
+.logo {
+  color: #8ee3c1;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+nav a {
+  color: #c1cbd8;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.hero {
+  padding: 90px 8%;
+  text-align: center;
+  background: linear-gradient(135deg, #152d36, #17213b);
+}
+
+.tag {
+  color: #8ee3c1;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+h1 {
+  font-size: clamp(36px, 7vw, 65px);
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+h1 span {
+  color: #8ee3c1;
+}
+
+.hero p {
+  color: #b4c1d0;
+  line-height: 1.7;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 22px;
+  background: #8ee3c1;
+  color: #10241e;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+main section:not(.hero) {
+  padding: 55px 7%;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+input {
+  width: 100%;
+  padding: 16px;
+  margin: 15px 0;
+  border: 1px solid #34445c;
+  background: #141e30;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0 25px;
+}
+
+button {
+  cursor: pointer;
+  padding: 10px 15px;
+  border: 1px solid #34445c;
+  border-radius: 25px;
+  background: #141e30;
+  color: white;
+}
+
+button.active,
+button:hover {
+  background: #8ee3c1;
+  color: #10241e;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.card {
+  background: #141e30;
+  border: 1px solid #26344a;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.card .category {
+  color: #8ee3c1;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.card h3 {
+  min-height: 48px;
+}
+
+.card p {
+  color: #aab8ca;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.card button {
+  margin: 5px 5px 0 0;
+}
+
+#saved-videos {
+  color: #b4c1d0;
+  line-height: 2;
+}
+
+footer {
+  padding: 30px;
+  text-align: center;
+  border-top: 1px solid #26344a;
+  color: #aab8ca;
+  font-size: 13px;
+}
+
+@media (max-width: 750px) {
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  header {
+    padding: 16px;
+  }
+
+  .logo {
+    font-size: 15px;
+  }
+
+  nav a {
+    margin-left: 8px;
+    font-size: 13px;
+  }
+
+  .hero {
+    padding: 65px 20px;
+  }
+
+  main section:not(.hero) {
+    padding: 35px 18px;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}
