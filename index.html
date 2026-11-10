@@ -3,14 +3,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover useful YouTube learning topics and grow your knowledge.">
   <title>Productive YouTube</title>
   <link rel="stylesheet" href="style.css">
-  <script src="app.js" defer></script>
 </head>
 <body>
-  <header>
-    <a class="logo" href="#">▶ Productive YouTube</a>
+  <header class="header">
+    <a class="logo" href="#">Productive<span>YouTube</span></a>
     <nav>
       <a href="#discover">Discover</a>
       <a href="#saved">Saved</a>
@@ -19,38 +19,54 @@
 
   <main>
     <section class="hero">
-      <p class="tag">LESS SCROLLING. MORE LEARNING.</p>
-      <h1>Make your YouTube time <span>count.</span></h1>
-      <p>Discover useful videos that help you learn skills, improve yourself and grow.</p>
-      <a class="button" href="#discover">Explore videos ↓</a>
+      <p class="eyebrow">LEARN SOMETHING VALUABLE</p>
+      <h1>Make your YouTube time <span>productive.</span></h1>
+      <p>Discover topics that help you learn, improve and grow.</p>
+      <a class="primary-button" href="#discover">Start exploring</a>
     </section>
 
-    <section id="discover">
-      <h2>Discover useful videos</h2>
-      <input id="search" type="search" placeholder="Search videos or topics...">
-
-      <div class="filters">
-        <button class="active" data-category="All">All</button>
-        <button data-category="Technology">Technology</button>
-        <button data-category="Science">Science</button>
-        <button data-category="Finance">Finance</button>
-        <button data-category="Education">Education</button>
-        <button data-category="Personal Growth">Personal Growth</button>
+    <section class="section" id="discover">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">EXPLORE</p>
+          <h2>Discover topics</h2>
+        </div>
       </div>
 
-      <div id="videos" class="video-grid"></div>
-      <p id="empty" hidden>No videos found. Try another search.</p>
+      <input
+        id="searchInput"
+        type="search"
+        placeholder="Search topics, skills or interests..."
+        aria-label="Search topics"
+      >
+
+      <div class="filters" id="filters">
+        <button class="filter active" data-category="All">All</button>
+        <button class="filter" data-category="Technology">Technology</button>
+        <button class="filter" data-category="Science">Science</button>
+        <button class="filter" data-category="Finance">Finance</button>
+        <button class="filter" data-category="Education">Education</button>
+        <button class="filter" data-category="Career">Career</button>
+        <button class="filter" data-category="Personal Growth">Personal Growth</button>
+      </div>
+
+      <div class="results-info" id="resultsInfo"></div>
+      <div class="topic-grid" id="topicGrid"></div>
     </section>
 
-    <section id="saved">
-      <h2>Your saved videos</h2>
-      <div id="saved-videos">No saved videos yet.</div>
+    <section class="section saved-section" id="saved">
+      <p class="eyebrow">YOUR COLLECTION</p>
+      <h2>Saved topics</h2>
+      <p class="section-description">Keep interesting topics here for later.</p>
+      <div class="topic-grid" id="savedGrid"></div>
+      <p id="emptySaved" class="empty-message">You haven't saved any topics yet.</p>
     </section>
   </main>
 
   <footer>
-    Productive YouTube · Learn something useful every day.
-    <p>Phase 1 prototype. Sample video data only.</p>
+    <p>Productive YouTube — Make every learning moment count.</p>
   </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>
